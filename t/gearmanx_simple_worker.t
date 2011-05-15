@@ -24,17 +24,6 @@ my $dir = dirname( abs_path( $0 ) );
 my $client = Gearman::Client->new;
 $client->job_servers("127.0.0.1:4370");
 
-#my $taskset = $client->new_task_set;
-#
-#my $handle = $taskset->add_task( "reverse" => "987654321", {
-#    "on_complete" => sub {
-#        use Data::Dumper;
-#        warn Dumper( \@_ );
-#        is( $_[0], "123456789", "string has been reversed by worker");
-#    },
-#} );
-#$taskset->wait;
-
 my $result_ref = $client->do_task("reverse", "987654321");
 is( $$result_ref, "123456789", "string has been reversed by worker");
 
