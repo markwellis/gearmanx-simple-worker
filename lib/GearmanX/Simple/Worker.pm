@@ -2,7 +2,7 @@ package GearmanX::Simple::Worker;
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 $VERSION = eval $VERSION;
 
 use App::Daemon;
@@ -45,6 +45,12 @@ sub work{
 =head1 NAME
 
 GearmanX::Simple::Worker - simple Gearman worker interface
+
+=head1 WARNING - UNMAINTAINED
+
+This code is no longer maintained. 
+
+Use at your own risk.
 
 =head1 SYNOPSIS
 
