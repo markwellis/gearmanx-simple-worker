@@ -15,6 +15,7 @@ test_requires 'IO::Socket::INET';
 test_requires 'POSIX';
 test_requires 'FindBin';
 test_requires 'constant';
+test_requires 'Gearman::Server';
 
 perl_version '5.008';
 
